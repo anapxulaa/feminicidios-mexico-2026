@@ -4,9 +4,9 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ni Una Más — Feminicidios México 2026</title>
-  <meta name="description" content="Registro público de feminicidios en México 2026. Documentado con fuentes periodísticas verificadas."/>
+  <meta name="description" content="Registro público de feminicidios en México 2026. Documentado por Ana Paula Galindo, activista feminista mexicana."/>
   <meta property="og:title" content="Ni Una Más — Feminicidios México 2026"/>
-  <meta property="og:description" content="Registro público documentado con fuentes verificadas."/>
+  <meta property="og:description" content="Registro público documentado con fuentes verificadas por Ana Paula Galindo."/>
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
     :root{
@@ -16,60 +16,46 @@
     body{background:var(--bk);color:var(--wh);font-family:'Georgia',serif;font-size:14px;}
     a{color:var(--r);text-decoration:none;}
     a:hover{text-decoration:underline;}
-
-    /* NAV */
-    nav{border-bottom:1px solid #1a1a1a;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10;position:sticky;top:0;background:var(--bk);z-index:100;}
+    nav{border-bottom:1px solid #2a2018;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;position:sticky;top:0;background:var(--bk);z-index:100;}
     .logo{color:var(--r);font-weight:900;letter-spacing:3px;font-size:15px;cursor:pointer;}
-    .logo span{color:#252525;font-size:11px;margin-left:8px;letter-spacing:1px;}
+    .logo span{color:#3a2a20;font-size:11px;margin-left:8px;letter-spacing:1px;}
     .nav-links{display:flex;gap:20px;flex-wrap:wrap;}
     .nav-links a{font-size:11px;color:var(--mt);letter-spacing:1px;text-transform:uppercase;text-decoration:none;padding-bottom:2px;}
     .nav-links a:hover,.nav-links a.active{color:var(--r);border-bottom:1px solid var(--r);}
-
-    /* SECCIONES */
     section{display:none;padding:32px 24px;max-width:860px;margin:0 auto;}
     section.active{display:block;}
-
-    /* INICIO */
     #inicio{display:none;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;text-align:center;max-width:100%;}
     #inicio.active{display:flex;}
     .eyebrow{font-size:11px;letter-spacing:6px;color:var(--r);text-transform:uppercase;margin-bottom:20px;}
     .contador{font-size:88px;font-weight:900;line-height:1;}
     .contador-label{font-size:12px;color:var(--mt);letter-spacing:3px;text-transform:uppercase;margin-top:6px;margin-bottom:6px;}
-    .contador-sub{font-size:12px;color:#2a2a2a;margin-bottom:36px;}
+    .contador-sub{font-size:12px;color:#3a2a20;margin-bottom:36px;}
     .stats-row{display:flex;gap:28px;flex-wrap:wrap;justify-content:center;margin-bottom:40px;}
     .stat{text-align:center;}
     .stat-n{font-size:24px;font-weight:700;}
     .stat-l{font-size:10px;color:var(--mt);letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
     .btn-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
     .btn{background:transparent;border:1px solid var(--r);color:var(--r);padding:10px 20px;cursor:pointer;font-size:12px;letter-spacing:1px;font-family:'Georgia',serif;transition:all .15s;}
-    .btn:hover{background:var(--r);color:#000;}
-    .fuentes{margin-top:40px;font-size:11px;color:#222;line-height:2;max-width:540px;}
-
-    /* FILTROS */
+    .btn:hover{background:var(--r);color:var(--wh);}
+    .fuentes{margin-top:40px;font-size:11px;color:#3a2a20;line-height:2;max-width:540px;}
     .filtros{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
-    .filtros input{background:var(--cd);border:1px solid #1e1e1e;color:var(--wh);padding:6px 10px;font-size:12px;outline:none;min-width:180px;flex:1;font-family:'Georgia',serif;}
-    .filtro-mes{font-size:11px;padding:4px 10px;cursor:pointer;border:1px solid #1e1e1e;color:var(--mt);white-space:nowrap;background:transparent;}
+    .filtros input{background:var(--cd);border:1px solid #2a1e18;color:var(--wh);padding:6px 10px;font-size:12px;outline:none;min-width:180px;flex:1;font-family:'Georgia',serif;}
+    .filtro-mes{font-size:11px;padding:4px 10px;cursor:pointer;border:1px solid #2a1e18;color:var(--mt);white-space:nowrap;background:transparent;}
     .filtro-mes.active,.filtro-mes:hover{border-color:var(--r);color:var(--r);}
-    select{background:var(--cd);border:1px solid #1e1e1e;color:var(--mt);padding:5px 8px;font-size:11px;font-family:'Georgia',serif;}
-    .count-label{font-size:11px;color:#2a2a2a;margin-bottom:14px;}
-
-    /* MES HEADER */
-    .mes-header{font-size:10px;color:var(--r);letter-spacing:4px;text-transform:uppercase;margin-bottom:10px;border-bottom:1px solid #161616;padding-bottom:6px;margin-top:24px;}
-
-    /* CARD */
+    select{background:var(--cd);border:1px solid #2a1e18;color:var(--mt);padding:5px 8px;font-size:11px;font-family:'Georgia',serif;}
+    .count-label{font-size:11px;color:#3a2a20;margin-bottom:14px;}
+    .mes-header{font-size:10px;color:var(--r);letter-spacing:4px;text-transform:uppercase;margin-bottom:10px;border-bottom:1px solid #241a14;padding-bottom:6px;margin-top:24px;}
     .card{background:var(--cd);border-left:2px solid var(--dr);padding:12px 14px;margin-bottom:6px;cursor:pointer;transition:border-color .1s;}
     .card:hover{border-left-color:var(--r);}
     .card-top{display:flex;justify-content:space-between;gap:8px;}
     .card-nombre{font-weight:700;font-size:14px;}
     .card-edad{color:var(--mt);font-size:11px;margin-left:8px;}
-    .card-fecha{font-size:10px;color:#2a2a2a;flex-shrink:0;}
+    .card-fecha{font-size:10px;color:#3a2a20;flex-shrink:0;}
     .card-lugar{font-size:11px;color:var(--sf);margin-top:3px;}
-    .card-ctx{font-size:11px;color:#363636;margin-top:5px;line-height:1.6;}
+    .card-ctx{font-size:11px;color:#4a3a30;margin-top:5px;line-height:1.6;}
     .card-meta{display:flex;gap:10px;margin-top:7px;flex-wrap:wrap;align-items:center;}
-    .card-fuente{font-size:10px;color:#282828;}
-    .badge{font-size:9px;color:#1a4a1a;background:#070f07;padding:2px 6px;border:1px solid #122012;}
-
-    /* DETALLE */
+    .card-fuente{font-size:10px;color:#3a2a20;}
+    .badge{font-size:9px;color:#1a4a1a;background:#0a140a;padding:2px 6px;border:1px solid #1a3a1a;}
     #detalle{display:none;padding:32px 24px;max-width:680px;margin:0 auto;}
     #detalle.active{display:block;}
     .back-btn{background:none;border:none;color:var(--mt);cursor:pointer;font-size:12px;letter-spacing:1px;margin-bottom:24px;padding:0;font-family:'Georgia',serif;}
@@ -78,43 +64,28 @@
     .detalle-nombre{font-size:28px;font-weight:900;margin-bottom:4px;line-height:1.1;}
     .detalle-edad{font-size:12px;color:var(--mt);margin-bottom:14px;}
     .detalle-lugar{font-size:12px;color:var(--sf);margin-bottom:18px;}
-    .detalle-ctx{font-size:14px;color:#888;line-height:1.9;margin-bottom:22px;}
-    .detalle-agresor{background:var(--cd);padding:14px;margin-bottom:14px;border-left:1px solid #1a1a1a;}
+    .detalle-ctx{font-size:14px;color:var(--sf);line-height:1.9;margin-bottom:22px;}
+    .detalle-agresor{background:var(--cd);padding:14px;margin-bottom:14px;border-left:1px solid #2a1e18;}
     .detalle-agresor-label{font-size:10px;color:var(--mt);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
-    .detalle-agresor-nombre{font-size:13px;}
-    .detalle-agresor-status{font-size:10px;margin-top:4px;}
     .detalle-fuente-label{font-size:11px;color:var(--mt);margin-bottom:4px;}
-
-    /* POR ESTADO */
     .estado-row{margin-bottom:10px;cursor:pointer;}
     .estado-top{display:flex;justify-content:space-between;margin-bottom:3px;}
-    .estado-nombre{font-size:13px;color:#aaa;}
+    .estado-nombre{font-size:13px;color:#c0a888;}
     .estado-n{font-size:13px;color:var(--r);font-weight:700;}
     .barra-bg{background:var(--gr);height:5px;}
     .barra{height:100%;transition:width .6s ease;background:var(--dr);}
     .barra.top{background:var(--r);}
-    .subregistro{margin-top:24px;background:#080808;padding:14px;font-size:11px;color:#2a2a2a;line-height:2;border-left:1px solid #151515;}
+    .subregistro{margin-top:24px;background:#150e0a;padding:14px;font-size:11px;color:#3a2a20;line-height:2;border-left:1px solid #2a1a10;}
     .subregistro span{color:var(--r);}
-
-    /* LOADING */
     #loading{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:16px;}
-    .spinner{width:32px;height:32px;border:2px solid #222;border-top-color:var(--r);border-radius:50%;animation:spin .8s linear infinite;}
+    .spinner{width:32px;height:32px;border:2px solid #2a1e18;border-top-color:var(--r);border-radius:50%;animation:spin .8s linear infinite;}
     @keyframes spin{to{transform:rotate(360deg);}}
     .loading-txt{font-size:11px;color:var(--mt);letter-spacing:2px;text-transform:uppercase;}
-
-    /* ERROR */
     #error-msg{display:none;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:12px;text-align:center;}
     #error-msg.show{display:flex;}
     #error-msg p{color:var(--mt);font-size:13px;max-width:400px;line-height:1.8;}
-
-    /* FOOTER */
-    footer{border-top:1px solid #111;padding:24px;text-align:center;font-size:11px;color:#222;line-height:2;margin-top:60px;}
-
-    @media(max-width:600px){
-      .contador{font-size:60px;}
-      nav{padding:12px 16px;}
-      section{padding:24px 16px;}
-    }
+    footer{border-top:1px solid #2a1a10;padding:24px;text-align:center;font-size:11px;color:#3a2a20;line-height:2;margin-top:60px;}
+    @media(max-width:600px){.contador{font-size:60px;}nav{padding:12px 16px;}section{padding:24px 16px;}}
   </style>
 </head>
 <body>
@@ -129,20 +100,17 @@
   </div>
 </nav>
 
-<!-- LOADING -->
 <div id="loading">
   <div class="spinner"></div>
   <div class="loading-txt">Cargando casos...</div>
 </div>
 
-<!-- ERROR -->
 <div id="error-msg">
   <div style="font-size:32px;color:var(--r)">✝</div>
   <p>No se pudieron cargar los datos. Verifica que el Google Sheet esté publicado correctamente.</p>
-  <p style="color:#333;font-size:11px;">Si eres la administradora: revisa que la URL del Sheet en el código sea correcta y esté publicada como CSV.</p>
+  <p style="color:#3a2a20;font-size:11px;">Si eres la administradora: revisa que la URL del Sheet en el código sea correcta y esté publicada como CSV.</p>
 </div>
 
-<!-- INICIO -->
 <section id="inicio">
   <div class="eyebrow">Enero – Marzo 2026</div>
   <div class="contador" id="total-n">—</div>
@@ -155,11 +123,10 @@
     <button class="btn" onclick="mostrar('sobre')">Sobre este registro</button>
   </div>
   <div class="fuentes">
-    Fuentes: Infobae · N+ · Milenio · Proceso · e-Veracruz · UnoTV · Excélsior · La Jornada · El Universal · Blog Frida Guerrera · SESNSP · Alertas Google News
+    Fuentes: Infobae · N+ · Milenio · Proceso · e-Veracruz · UnoTV · Excélsior · La Jornada · El Universal · Blog Frida Guerrera · SESNSP
   </div>
 </section>
 
-<!-- CASOS -->
 <section id="casos">
   <div class="filtros">
     <input type="text" id="busq" placeholder="Buscar nombre, estado, municipio..." oninput="renderCasos()"/>
@@ -173,18 +140,16 @@
   </div>
   <div class="count-label" id="count-label"></div>
   <div id="lista-casos"></div>
-  <div style="font-size:10px;color:#1e1e1e;border-top:1px solid #0e0e0e;padding-top:12px;margin-top:12px;line-height:1.9;">
+  <div style="font-size:10px;color:#2a1a10;border-top:1px solid #1e1410;padding-top:12px;margin-top:12px;line-height:1.9;">
     * Lista no exhaustiva. Incluye casos con cobertura verificada en medios. El blog de Frida Guerrera registra más casos.
   </div>
 </section>
 
-<!-- DETALLE -->
 <div id="detalle">
   <button class="back-btn" onclick="cerrarDetalle()">← volver</button>
   <div class="detalle-inner" id="detalle-inner"></div>
 </div>
 
-<!-- POR ESTADO -->
 <section id="estados">
   <h2 style="color:var(--sf);font-weight:400;font-size:12px;letter-spacing:3px;text-transform:uppercase;margin-bottom:20px;">Casos documentados por estado · 2026</h2>
   <div id="lista-estados"></div>
@@ -195,17 +160,20 @@
   </div>
 </section>
 
-<!-- SOBRE -->
 <section id="sobre">
   <h2 style="color:var(--sf);font-weight:400;font-size:12px;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px;">Sobre este registro</h2>
-  <div style="color:#888;font-size:14px;line-height:2;max-width:580px;">
+  <div style="color:var(--sf);font-size:14px;line-height:2;max-width:580px;">
     <p style="margin-bottom:20px;">
-      Este es un registro independiente de feminicidios en México documentados en medios de comunicación durante 2026.
-      Fue creado por una activista feminista con el objetivo de visibilizar los casos y nombrar a las víctimas.
+      Este es un registro independiente de feminicidios en México durante 2026, creado por
+      <strong style="color:var(--wh);">Ana Paula Galindo</strong>, activista feminista mexicana,
+      con el objetivo de contar, nombrar y visibilizar a las víctimas de feminicidio en México
+      y documentar la magnitud de la crisis.
     </p>
     <p style="margin-bottom:20px;">
-      <strong style="color:var(--wh);">Metodología:</strong> Los casos se recopilan de notas periodísticas verificadas,
-      alertas de Google News y el Blog de Frida Guerrera (#FeminicidioEmergenciaNacional).
+      <strong style="color:var(--wh);">Metodología:</strong> Los casos se recopilan de forma manual
+      y con apoyo de inteligencia artificial a partir de notas periodísticas verificadas,
+      alertas de Google News y el registro diario del
+      <a href="https://fridaguerrera.blogspot.com" target="_blank">Blog de Frida Guerrera (#FeminicidioEmergenciaNacional)</a>.
       Se incluyen feminicidios y homicidios dolosos de mujeres con indicios de violencia de género.
     </p>
     <p style="margin-bottom:20px;">
@@ -214,34 +182,35 @@
       se investigan como feminicidio (OCNF). La cifra real es mucho mayor.
     </p>
     <p style="margin-bottom:20px;">
-      <strong style="color:var(--wh);">Fuentes oficiales:</strong><br/>
+      <strong style="color:var(--wh);">Fuentes y recursos:</strong><br/>
       <a href="https://www.gob.mx/sesnsp" target="_blank">SESNSP — Secretariado Ejecutivo del SNSP</a><br/>
       <a href="https://fridaguerrera.blogspot.com" target="_blank">Blog de Frida Guerrera — #NiUnaMás</a><br/>
-      <a href="https://ocnf.mx" target="_blank">Observatorio Ciudadano Nacional del Feminicidio</a>
+      <a href="https://ocnf.mx" target="_blank">Observatorio Ciudadano Nacional del Feminicidio (OCNF)</a><br/>
+      <a href="https://datoscontraelfeminicidio.net" target="_blank">Datos Contra el Feminicidio</a><br/>
+      <a href="https://dataagainstfeminicide.net" target="_blank">Data Against Feminicide — MIT + Northeastern</a><br/>
+      <a href="https://datacivica.org" target="_blank">Data Cívica</a>
     </p>
-    <p style="color:#333;">
+    <p style="color:var(--mt);font-size:12px;margin-bottom:20px;">
+      Data Against Feminicide es un proyecto del MIT Media Lab y Northeastern University que desarrolla
+      herramientas de datos para activistas y periodistas que documentan feminicidios en América Latina y el mundo.
+    </p>
+    <p style="color:#4a3a28;">
       #NiUnaMás · #VivasNosQueremos · #FeminicidioEmergenciaNacional
     </p>
   </div>
 </section>
 
 <footer>
-  ✝ NI UNA MÁS · México 2026 · Registro independiente documentado con fuentes verificadas<br/>
-  <span style="color:#1a1a1a;">Datos actualizados automáticamente desde Google Sheets</span>
+  ✝ NI UNA MÁS · México 2026 · Registro independiente por Ana Paula Galindo<br/>
+  <span style="color:#2a1a10;">Datos actualizados automáticamente desde Google Sheets</span>
 </footer>
 
 <script>
-  // ─── CONFIGURACIÓN ────────────────────────────────────────────────────────
-  // Reemplaza esta URL con la tuya del Google Sheet publicado como CSV
   const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3wb0gjECb5sv8Qi5Xqjw-XKUUTpjD6LCOf22HmJwR8TolnbJRCuY26CN12clROg/pub?output=csv";
-  // Ejemplo: "https://docs.google.com/spreadsheets/d/XXXXXXXXXXXXXXXX/pub?gid=0&single=true&output=csv"
-  // ─────────────────────────────────────────────────────────────────────────
 
   let CASOS = [];
   let mesActivo = "Todos";
-  let casoSeleccionado = null;
 
-  // ─── CARGAR DATOS ────────────────────────────────────────────────────────
   async function cargarDatos() {
     try {
       const res = await fetch(SHEET_URL);
@@ -259,153 +228,102 @@
   function parseCSV(text) {
     const lines = text.trim().split("\n");
     const headers = lines[0].split(",").map(h => h.replace(/"/g,"").trim().toLowerCase());
-    return lines.slice(1).map((line, i) => {
+    return lines.slice(1).map(line => {
       const vals = parseLine(line);
       const obj = {};
-      headers.forEach((h, j) => obj[h] = (vals[j]||"").replace(/^"|"$/g,"").replace(/""/g,'"').trim());
+      headers.forEach((h,j) => obj[h] = (vals[j]||"").replace(/^"|"$/g,"").replace(/""/g,'"').trim());
       return obj;
     }).filter(c => c.nombre || c.estado);
   }
 
   function parseLine(line) {
-    const result = [];
-    let cur = "", inQ = false;
+    const result = []; let cur = "", inQ = false;
     for (let i = 0; i < line.length; i++) {
-      if (line[i] === '"') {
-        if (inQ && line[i+1] === '"') { cur += '"'; i++; }
-        else inQ = !inQ;
-      } else if (line[i] === ',' && !inQ) {
-        result.push(cur); cur = "";
-      } else cur += line[i];
+      if (line[i]==='"') { if(inQ&&line[i+1]==='"'){cur+='"';i++;}else inQ=!inQ; }
+      else if (line[i]===','&&!inQ) { result.push(cur); cur=""; }
+      else cur+=line[i];
     }
-    result.push(cur);
-    return result;
+    result.push(cur); return result;
   }
 
-  // ─── INICIALIZAR ─────────────────────────────────────────────────────────
   function inicializar() {
-    // Stats inicio
     document.getElementById("total-n").textContent = CASOS.length;
-    const conNombre = CASOS.filter(c => c.nombre && !c.nombre.startsWith("NN")).length;
-    const detenidos = CASOS.filter(c => c.detenido === "Sí").length;
-    const estados = new Set(CASOS.map(c => c.estado)).size;
-    const menores = CASOS.filter(c => c.edad && parseInt(c.edad) < 18).length;
-    const statsData = [
-      [conNombre, "Con nombre"],
-      [CASOS.length - conNombre, "Sin identificar"],
-      [detenidos, "Agresor detenido"],
-      [menores, "Menores de 18"],
-      [estados, "Estados"],
-    ];
-    document.getElementById("stats-row").innerHTML = statsData.map(([n,l]) =>
-      `<div class="stat"><div class="stat-n">${n}</div><div class="stat-l">${l}</div></div>`
-    ).join("");
-
-    // Select estados
-    const ests = [...new Set(CASOS.map(c => c.estado))].filter(Boolean).sort();
+    const conNombre = CASOS.filter(c=>c.nombre&&!c.nombre.startsWith("NN")).length;
+    const detenidos = CASOS.filter(c=>c.detenido==="Sí").length;
+    const estados = new Set(CASOS.map(c=>c.estado)).size;
+    const menores = CASOS.filter(c=>c.edad&&parseInt(c.edad)<18).length;
+    document.getElementById("stats-row").innerHTML = [
+      [conNombre,"Con nombre"],[CASOS.length-conNombre,"Sin identificar"],
+      [detenidos,"Agresor detenido"],[menores,"Menores de 18"],[estados,"Estados"]
+    ].map(([n,l])=>`<div class="stat"><div class="stat-n">${n}</div><div class="stat-l">${l}</div></div>`).join("");
+    const ests = [...new Set(CASOS.map(c=>c.estado))].filter(Boolean).sort();
     const sel = document.getElementById("sel-estado");
-    ests.forEach(e => {
-      const o = document.createElement("option");
-      o.value = e; o.textContent = e;
-      sel.appendChild(o);
-    });
-
-    mostrar("inicio");
-    renderCasos();
-    renderEstados();
+    ests.forEach(e=>{ const o=document.createElement("option"); o.value=e; o.textContent=e; sel.appendChild(o); });
+    mostrar("inicio"); renderCasos(); renderEstados();
   }
 
-  // ─── NAVEGACIÓN ──────────────────────────────────────────────────────────
   function mostrar(id) {
-    ["inicio","casos","estados","sobre"].forEach(s => {
+    ["inicio","casos","estados","sobre"].forEach(s=>{
       document.getElementById(s).classList.remove("active");
-      const nav = document.getElementById("nav-"+s);
-      if (nav) nav.classList.remove("active");
+      const n=document.getElementById("nav-"+s); if(n)n.classList.remove("active");
     });
     document.getElementById("detalle").classList.remove("active");
     document.getElementById(id).classList.add("active");
-    const nav = document.getElementById("nav-"+id);
-    if (nav) nav.classList.add("active");
+    const n=document.getElementById("nav-"+id); if(n)n.classList.add("active");
     window.scrollTo(0,0);
   }
 
-  function setMes(mes, el) {
-    mesActivo = mes;
-    document.querySelectorAll(".filtro-mes").forEach(e => e.classList.remove("active"));
-    el.classList.add("active");
-    renderCasos();
+  function setMes(mes,el) {
+    mesActivo=mes;
+    document.querySelectorAll(".filtro-mes").forEach(e=>e.classList.remove("active"));
+    el.classList.add("active"); renderCasos();
   }
 
-  // ─── RENDER CASOS ────────────────────────────────────────────────────────
   function renderCasos() {
-    const busq = document.getElementById("busq").value.toLowerCase();
-    const estado = document.getElementById("sel-estado").value;
-    const MESES = ["Enero","Febrero","Marzo"];
-
-    const filtrados = CASOS.filter(c =>
-      (mesActivo === "Todos" || c.mes === mesActivo) &&
-      (!estado || c.estado === estado) &&
-      (!busq || (c.nombre||"").toLowerCase().includes(busq) ||
-                (c.estado||"").toLowerCase().includes(busq) ||
-                (c.municipio||"").toLowerCase().includes(busq))
+    const busq=document.getElementById("busq").value.toLowerCase();
+    const estado=document.getElementById("sel-estado").value;
+    const MESES=["Enero","Febrero","Marzo"];
+    const filtrados=CASOS.filter(c=>
+      (mesActivo==="Todos"||c.mes===mesActivo)&&
+      (!estado||c.estado===estado)&&
+      (!busq||(c.nombre||"").toLowerCase().includes(busq)||(c.estado||"").toLowerCase().includes(busq)||(c.municipio||"").toLowerCase().includes(busq))
     );
-
-    document.getElementById("count-label").textContent =
-      `${filtrados.length} casos · ${mesActivo !== "Todos" ? mesActivo : "Ene–Mar"} · ${estado || "todos los estados"}`;
-
-    const lista = document.getElementById("lista-casos");
-    lista.innerHTML = MESES.map(mes => {
-      const del = filtrados.filter(c => c.mes === mes);
-      if (!del.length) return "";
-      return `
-        <div class="mes-header">${mes} · ${CASOS.filter(c=>c.mes===mes).length} casos documentados</div>
-        ${del.map(c => tarjeta(c)).join("")}
-      `;
+    document.getElementById("count-label").textContent=`${filtrados.length} casos · ${mesActivo!=="Todos"?mesActivo:"Ene–Mar"} · ${estado||"todos los estados"}`;
+    document.getElementById("lista-casos").innerHTML=MESES.map(mes=>{
+      const del=filtrados.filter(c=>c.mes===mes);
+      if(!del.length)return "";
+      return `<div class="mes-header">${mes} · ${CASOS.filter(c=>c.mes===mes).length} casos documentados</div>${del.map(c=>tarjeta(c)).join("")}`;
     }).join("");
   }
 
   function tarjeta(c) {
-    const lugar = [c.municipio, c.estado].filter(Boolean).join(", ");
-    const ctx = (c.contexto||"").slice(0,120) + ((c.contexto||"").length > 120 ? "…" : "");
-    const fecha = (c.fecha||"").slice(5).replace("-","/");
-    return `
-      <div class="card" onclick="abrirDetalle(${c.id})">
-        <div class="card-top">
-          <div><span class="card-nombre">${c.nombre||"NN"}</span>${c.edad?`<span class="card-edad">${c.edad} años</span>`:""}</div>
-          <span class="card-fecha">${fecha}</span>
-        </div>
-        <div class="card-lugar">${lugar}</div>
-        <div class="card-ctx">${ctx}</div>
-        <div class="card-meta">
-          <span class="card-fuente">📰 ${c.fuente||""}</span>
-          ${c.detenido==="Sí"?'<span class="badge">agresor detenido</span>':""}
-        </div>
-      </div>
-    `;
+    const lugar=[c.municipio,c.estado].filter(Boolean).join(", ");
+    const ctx=(c.contexto||"").slice(0,120)+((c.contexto||"").length>120?"…":"");
+    const fecha=(c.fecha||"").slice(5).replace("-","/");
+    return `<div class="card" onclick="abrirDetalle('${c.id}')">
+      <div class="card-top"><div><span class="card-nombre">${c.nombre||"NN"}</span>${c.edad?`<span class="card-edad">${c.edad} años</span>`:""}</div><span class="card-fecha">${fecha}</span></div>
+      <div class="card-lugar">${lugar}</div>
+      <div class="card-ctx">${ctx}</div>
+      <div class="card-meta"><span class="card-fuente">📰 ${c.fuente||""}</span>${c.detenido==="Sí"?'<span class="badge">agresor detenido</span>':""}</div>
+    </div>`;
   }
 
   function abrirDetalle(id) {
-    const c = CASOS.find(x => String(x.id) === String(id));
-    if (!c) return;
-    casoSeleccionado = c;
-    const lugar = [c.municipio, c.estado].filter(Boolean).join(", ");
-    document.getElementById("detalle-inner").innerHTML = `
+    const c=CASOS.find(x=>String(x.id)===String(id)); if(!c)return;
+    const lugar=[c.municipio,c.estado].filter(Boolean).join(", ");
+    document.getElementById("detalle-inner").innerHTML=`
       <div class="detalle-eyebrow">${c.mes||""} · ${c.estado||""}</div>
       <div class="detalle-nombre">${c.nombre||"NN"}</div>
       ${c.edad?`<div class="detalle-edad">${c.edad} años</div>`:""}
       <div class="detalle-lugar">${lugar} · ${c.fecha||""}</div>
       <div class="detalle-ctx">${c.contexto||""}</div>
-      ${c.agresor?`
-        <div class="detalle-agresor">
-          <div class="detalle-agresor-label">Agresor</div>
-          <div class="detalle-agresor-nombre" style="color:${c.detenido==='Sí'?'#5a9a5a':'var(--r)'}">${c.agresor}</div>
-          <div class="detalle-agresor-status" style="color:${c.detenido==='Sí'?'#1a5a1a':'var(--dr)'}">${c.detenido==='Sí'?'Detenido':'Sin detenidos reportados'}</div>
-        </div>
-      `:""}
+      ${c.agresor?`<div class="detalle-agresor"><div class="detalle-agresor-label">Agresor</div>
+        <div style="font-size:13px;color:${c.detenido==='Sí'?'#5a9a5a':'var(--r)'};">${c.agresor}</div>
+        <div style="font-size:10px;margin-top:4px;color:${c.detenido==='Sí'?'#1a5a1a':'var(--dr)'};">${c.detenido==='Sí'?'Detenido':'Sin detenidos reportados'}</div>
+      </div>`:""}
       <div class="detalle-fuente-label">Fuente:</div>
-      <a href="${c.url||'#'}" target="_blank" rel="noreferrer">${c.fuente||"—"} ↗</a>
-    `;
-    ["inicio","casos","estados","sobre"].forEach(s => document.getElementById(s).classList.remove("active"));
+      <a href="${c.url||'#'}" target="_blank" rel="noreferrer">${c.fuente||"—"} ↗</a>`;
+    ["inicio","casos","estados","sobre"].forEach(s=>document.getElementById(s).classList.remove("active"));
     document.getElementById("detalle").classList.add("active");
     window.scrollTo(0,0);
   }
@@ -415,37 +333,27 @@
     mostrar("casos");
   }
 
-  // ─── RENDER ESTADOS ───────────────────────────────────────────────────────
   function renderEstados() {
-    const counts = {};
-    CASOS.forEach(c => { if(c.estado) counts[c.estado] = (counts[c.estado]||0)+1; });
-    const sorted = Object.entries(counts).sort((a,b) => b[1]-a[1]);
-    const max = sorted[0]?.[1] || 1;
-    document.getElementById("lista-estados").innerHTML = sorted.map(([e,n],i) => `
+    const counts={};
+    CASOS.forEach(c=>{if(c.estado)counts[c.estado]=(counts[c.estado]||0)+1;});
+    const sorted=Object.entries(counts).sort((a,b)=>b[1]-a[1]);
+    const max=sorted[0]?.[1]||1;
+    document.getElementById("lista-estados").innerHTML=sorted.map(([e,n],i)=>`
       <div class="estado-row" onclick="filtrarPorEstado('${e}')">
-        <div class="estado-top">
-          <span class="estado-nombre">${e}</span>
-          <span class="estado-n">${n}</span>
-        </div>
-        <div class="barra-bg">
-          <div class="barra ${i===0?'top':''}" style="width:${(n/max)*100}%"></div>
-        </div>
-      </div>
-    `).join("");
+        <div class="estado-top"><span class="estado-nombre">${e}</span><span class="estado-n">${n}</span></div>
+        <div class="barra-bg"><div class="barra ${i===0?'top':''}" style="width:${(n/max)*100}%"></div></div>
+      </div>`).join("");
   }
 
   function filtrarPorEstado(estado) {
-    document.getElementById("sel-estado").value = estado;
-    mesActivo = "Todos";
-    document.querySelectorAll(".filtro-mes").forEach(e => e.classList.remove("active"));
+    document.getElementById("sel-estado").value=estado;
+    mesActivo="Todos";
+    document.querySelectorAll(".filtro-mes").forEach(e=>e.classList.remove("active"));
     document.querySelector(".filtro-mes").classList.add("active");
-    mostrar("casos");
-    renderCasos();
+    mostrar("casos"); renderCasos();
   }
 
-  // ─── ARRANCAR ────────────────────────────────────────────────────────────
   cargarDatos();
 </script>
 </body>
-</html>
 </html>
